@@ -1,0 +1,52 @@
+{%extends 'correction/base.html.twig'%}
+
+{%block title%} Liste {%endblock%}
+
+{%block contenu%}
+<table class="table caption-top">
+
+        <caption>Liste des personnes inscrites</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">Date de naissance</th>
+            <th scope="col">Module</th>
+            <th scope="col">Niveau Scolaire</th>
+            <th scope="col">Motif d'Inscription</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{etudiant.nom}}</td>
+            <td>{{etudiant.prenom}}</td>
+            <td>{{etudiant.date_naissance|date('d-m-y')}}</td>
+            <td>{{etudiant.module_souhaite}}</td>
+            <td>{{etudiant.niveau_scolaire}}</td>
+            <td>{{etudiant.motif_inscription}}</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Kouame</td>
+            <td>Jacob</td>
+            <td>17/05/2018</td>
+            <td>C#</td>
+            <td>Bac+3</td>
+            <td>Passionnée des TIC</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Kone</td>
+            <td>Moussa</td>
+            <td>06/12/2015</td>
+            <td>TypeScript</td>
+            <td>Bac+5</td>
+            <td>Passionnée des TIC</td>
+          </tr>
+          
+        </tbody>
+      </table>
+{%endblock%}

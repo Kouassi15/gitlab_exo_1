@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{%block title%} page formulaire {%endblock%}
+
+{%block contenu%}
+<div class="container">
+   <h2>Formulaire d'Inscription</h2>
+    <form action="{{path('app_add_etudiant')}}" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" class="form-control" id="nom" name="nom" value="" required><br>
+        
+        <label for="prenom">Prénom :</label>
+        <input type="text" class="form-control" id="prenom" name="prenom" value="" required><br>
+        
+        <label for="date_naissance">Date de Naissance :</label>
+        <input type="date" class="form-control" id="date_naissance" name="date_naissance" value="" required><br>
+        
+        <label for="niveau_scolaire">Niveau Scolaire :</label>
+        <input type="text"class="form-control" id="niveau_scolaire" name="niveau_scolaire" value="" required><br>
+        
+        <label for="module_choisir">Module choisir :</label>
+        <select id="module_choisir" name="module_choisir" value="">
+            <option value="symfony">Symfony</option>
+            <option value="C#">C#</option>
+            <option value="typescript">TypeScript</option>
+        </select><br>
+        
+        <label for="motif_inscription">Motif d'Inscription :</label><br>
+        <textarea id="motif_inscription" class="form-control" name="motif_inscription" rows="4" cols="50" value="" required></textarea><br><br>
+        
+        <button type="submit" class="btn btn-primary">Soumettre</button>
+    </form>
+</div>
+{%endblock%}

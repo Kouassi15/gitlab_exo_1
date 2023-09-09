@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %} 
+{% block content %}
+
+    {{ form_start(etudiantform) }}
+        {# {{ form_label(form.nom) }} #}
+        {{ form_row(etudiantform.nom) }}
+   
+        {# {{ form_label(form.prenom) }} #}
+        {{ form_row(etudiantform.prenom) }}
+
+        {# {{ form_label(form.date_naissance) }} #}
+        {{ form_row(etudiantform.date_naissance) }}
+
+         {# {{ form_label(form.module_choisir) }} #}
+        {{ form_row(etudiantform.module_choisir) }}
+
+         {# {{ form_label(form.niveau_scolaire) }} #}
+        {{ form_row(etudiantform.niveau_scolaire) }}
+
+         {# {{ form_label(form.motif_inscription) }} #}
+        {{ form_row(etudiantform.motif_inscription) }}
+
+        {# {{ form_row(etudiantform.date_created) }} #}
+        {# {{ form_rest(form) }} #}
+         <button type="submit" class="btn btn-primary">Enregistrer</button> 
+    {{ form_end(etudiantform) }}
+{% endblock %} 
